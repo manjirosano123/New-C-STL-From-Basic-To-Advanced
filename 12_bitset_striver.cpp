@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    //int 16 bits;
+    //char 8bits;
+    //segmentry problems bitset;
+    int a[100];
+    char b[100]; 
+    //1 means set;
+    //bitset --> 1 bit;
+    //bitset only stores 1 or 0;
+    //cannot stores a number;
+    bitset<5>bt;
+    cin>>bt; // 11111;
+    //all;
+    cout<<bt.all()<<endl;// return true or false; 11111;
+    //any;
+    cout<<bt.any();//bt -> 10000 (true); (required any one or more bit is to be a set(1));
+    cout<<bt.any();//bt -> 00000 (false);
+    //count;
+    cout<<bt.count();//bt -> 10010 output -> 2 because contains 2 set(1);
+    //flip;
+    //bt -> 10100;
+    bt.flip(2);//bt will be 10000 (because it flip the 2nd index);
+    bt.flip();//flips all the bits 10101 -> 01010;
+    //none;
+    //if none is set then true else false;
+    cout<<bt.none();//bt -> 10000 (false); beccause onr bit is set(1);
+    cout<<bt.none();//bt -> 00000 (true);
+    //set;
+    bt.set(); //10010 -> 11111 covert whole range to set;
+    bt.set(2);//10010 -> 10110;
+    //whatever at index 2 this will convert it into set;
+    bt.set(0 , 0);//10010 -> 00010;
+    //reset;
+    bt.reset();//this will  covert all the range to 0;
+    bt.reset(2);//11111 -> 11011;   
+    //size;
+    cout<<bt.size()<<endl;//give the size of the bitset;
+    //test;
+    cout<<bt.test(1);//check if the bit is set or not at index 1;
+}
