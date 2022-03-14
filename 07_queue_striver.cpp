@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
     //no iterator in queue;
-    //stack is always follows first in first out
+    //Queue is always follows first in first out
     //push;
     //front;
     //pop;
